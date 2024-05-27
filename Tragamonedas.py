@@ -1,6 +1,4 @@
 
-# Libreria
-
 from random import randint
 
 class Tragamonedas:

@@ -31,11 +31,14 @@ class Camiseta:
 
 		return info
 
-camiseta_gucci = Camiseta("M", "Negro", 100, "Gucci")
-camiseta_adidas = Camiseta("M", "Rojo", 30, "Adidas")
+camisetas = [
+	Camiseta("M", "Negro", 100, "Gucci"),
+	Camiseta("M", "Rojo", 30, "Adidas")
+]
 
-camiseta_gucci.descuento(20)
-camiseta_adidas.descuento(50)
+for camisa in camisetas:
+	camisa.descuento(20)
+	camisa.descuento(50)
 
-print(camiseta_gucci.informacion())
-print(camiseta_adidas.informacion())
+	print(camisa.informacion())
+	print(camisa.informacion())

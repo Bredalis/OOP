@@ -14,9 +14,7 @@ class Persona:
 		self.edad = edad
 		self.dni = dni
 
-	# Mostrar informacion
-
-	def presentarse(self):
+	def mostrar_informacion(self):
 		print(f"Nombre: {self.nombre} \nEdad: {self.edad}")
 
 class Trabajador(Persona):
@@ -40,12 +38,12 @@ class Trabajador(Persona):
 print("Informacion:\n")
 
 oscar = Persona("Oscar", 23, "76893434")
-oscar.presentarse()
+oscar.mostrar_informacion()
 
 print("dni:", oscar.dni)
 
 trabajador = Trabajador(
 	"Bredalis", 34, "564g98800", 21000, "Programador", "Google")
 
-trabajador.presentarse()
+trabajador.mostrar_informacion()
 trabajador.calcular_sueldo()

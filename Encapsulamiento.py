@@ -15,7 +15,7 @@ class Circulo:
 		self.__pi = 3.1415
 
 	def calcular_perimetro(self):
-		print(f"Perimetro: {2 * self.__pi*self.__radio}")
+		print(f"Perimetro: {2 * self.__pi * self.__radio}")
 
 	def calcular_area(self):
 		print(f"Area: {self.__pi * self.__radio ** 2}")
@@ -38,17 +38,11 @@ class Circulo:
 		else:
 			print("Tiene que ser un numero positivo")
 
-"""
-Muestra del perimetro, 
-area, radio y PI de un circulo
-"""
-
 print("Propiedades de un circulo:\n")
 
 circulo = Circulo(2.5)
 
 circulo.calcular_perimetro()
 circulo.calcular_area()
-
 circulo.obtener_pi()
 circulo.obtener_radio(1)

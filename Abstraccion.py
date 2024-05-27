@@ -72,11 +72,9 @@ class Guerrero(Personaje):
 guerrero = Guerrero("Pedro")
 mago = Mago("Yuto")
 
-guerrero.estado()
-mago.estado()
+objectos = [guerrero, mago]
 
-guerrero.obtener_inventario()
-mago.obtener_inventario()
-
-guerrero.atacar(mago)
-mago.atacar(guerrero)
+for i in range(2):
+	objectos[i].estado()
+	objectos[i].obtener_inventario()
+	objectos[i].atacar(objectos[i])
