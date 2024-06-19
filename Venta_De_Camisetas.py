@@ -23,12 +23,11 @@ class Camiseta:
 		info = f"\nDescripcion de la camiseta: \nMarca: {self.marca} \
 		\nPrecio: {self.precio:.2f} \nColor: {self.color} \nTalla: {self.talla} \n"
 
-		if self.rebajada:
-			info += "\nEste producto esta rebajado"
-
-		else:
+		if self.rebajada != True:
 			info += "\nEste producto no esta rebajado"
+			return 
 
+		info += "\nEste producto esta rebajado"
 		return info
 
 camisetas = [

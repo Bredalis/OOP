@@ -24,19 +24,18 @@ class Circulo:
 		print(f"PI: {self.__pi}")
 
 	def obtener_radio(self, valor):
+		self.__radio = valor
 
 		# Si el valor no es positivo no se mostrara el radio
 
-		if type(valor) == int or type(valor) == float:
+		try:
+			if valor <= 0:
+				return "No puede ser negativo ni cero"
+		
+			return f"Radio: {self.__radio}"
 
-			if valor > 0:
-				self.__radio = valor
-				print(f"Radio: {self.__radio}")
-
-			else:
-				print("No puede ser negativo")
-		else:
-			print("Tiene que ser un numero positivo")
+		except Exception as e:
+			return f"Tiene que ser un numero positivo"		
 
 print("Propiedades de un circulo:\n")
 
@@ -45,4 +44,4 @@ circulo = Circulo(2.5)
 circulo.calcular_perimetro()
 circulo.calcular_area()
 circulo.obtener_pi()
-circulo.obtener_radio(1)
+print(circulo.obtener_radio(2))
