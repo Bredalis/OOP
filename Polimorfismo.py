@@ -13,7 +13,7 @@ class Empleado:
 
 	def calcular_sueldo(self):
 		sueldo = 12 * self.sueldo_mensual * (1 + self.numero / 100)
-		print(f"El sueldo anual de {self.nombre} - {self.trabajo}, es de {sueldo}")
+		print(f"El sueldo anual del {self.trabajo} {self.nombre} es de {sueldo}")
 
 class Contable(Empleado):
 	def __init__(self, nombre, sueldo_mensual, numero, trabajo):

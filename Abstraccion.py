@@ -49,7 +49,7 @@ class Mago(Personaje):
 		super().estado()
 
 	def atacar(self, objectivo):
-		objectivo.vida -= self.inteligencia*0.6
+		objectivo.vida -= self.inteligencia * 0.6
 		print(f"Vida actual del objetivo es: {objectivo.vida}")
 
 class Guerrero(Personaje):
@@ -66,7 +66,7 @@ class Guerrero(Personaje):
 		super().estado()
 
 	def atacar(self, objectivo):
-		objectivo.vida -= self.Fuerza*0.8
+		objectivo.vida -= self.Fuerza * 0.8
 		print(f"El objetivo se ha quedado con {objectivo.vida} puntos de vida")
 
 guerrero = Guerrero("Pedro")

@@ -42,8 +42,8 @@ oscar.mostrar_informacion()
 
 print("dni:", oscar.dni)
 
-trabajador = Trabajador(
-	"Bredalis", 34, "564g98800", 21000, "Programador", "Google")
+trabajador = Trabajador("Bredalis", 34, 
+	"564g98800", 21000, "Programador", "Google")
 
 trabajador.mostrar_informacion()
 trabajador.calcular_sueldo()

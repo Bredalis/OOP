@@ -29,7 +29,7 @@ class Tragamonedas:
 		numeros = randint(0, 9), randint(0, 9), randint(0, 9)
 		mensaje = ""
 
-		if numeros[0] == numeros[1] == numeros[2]:
+		if numeros[0] != numeros[1] != numeros[2]:
 
 			self.jackpots += 1
 			mensaje = f"Ganaste {self.premio}"
