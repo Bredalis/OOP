@@ -10,7 +10,7 @@ class Camiseta:
 		self.marca = marca
 		self.rebajada = False
 
-	def descuento(self, porcentaje): 
+	def crear_descuento(self, porcentaje): 
 		self.precio = self.precio - self.precio * porcentaje / 100
 
 		# Mostrar precio rebajado (descuento)
@@ -18,17 +18,17 @@ class Camiseta:
 		if porcentaje < 100:
 			self.rebajada = True
 
-	def informacion(self):
+	def mostrar_informacion(self):
 
 		info = f"\nDescripcion de la camiseta: \nMarca: {self.marca} \
 		\nPrecio: {self.precio:.2f} \nColor: {self.color} \nTalla: {self.talla} \n"
 
-		if self.rebajada != True:
-			info += "\nEste producto no esta rebajado"
-			return 
+		print(info)
 
-		info += "\nEste producto esta rebajado"
-		return info
+		if self.rebajada != True:
+			return "\nEste producto no esta rebajado"
+
+		return "\nEste producto esta rebajado"
 
 camisetas = [
 	Camiseta("M", "Negro", 100, "Gucci"),
@@ -36,8 +36,7 @@ camisetas = [
 ]
 
 for camisa in camisetas:
-	camisa.descuento(20)
-	camisa.descuento(50)
-
-	print(camisa.informacion())
-	print(camisa.informacion())
+	print(camisa.mostrar_informacion())
+	
+	camisa.crear_descuento(50)
+	print(camisa.mostrar_informacion())

@@ -35,7 +35,7 @@ class Trabajador(Persona):
 
 # Muestra los nombres, edades y dni
 
-print("Informacion:\n")
+print("Información:\n")
 
 oscar = Persona("Oscar", 23, "76893434")
 oscar.mostrar_informacion()

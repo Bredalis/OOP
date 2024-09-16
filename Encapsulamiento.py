@@ -1,9 +1,9 @@
 
 """
 Programa que murestra 
-el numero PI y calcula 
+el número PI y calcula 
 el perimetro, radio y 
-area de un circulo
+area de un círculo
 """
 
 class Circulo:
@@ -37,7 +37,7 @@ class Circulo:
 		except Exception as e:
 			return f"Tiene que ser un numero positivo"		
 
-print("Propiedades de un circulo:\n")
+print("Propiedades de un círculo:\n")
 
 circulo = Circulo(2.5)
 
