@@ -1,41 +1,28 @@
 
-"""
-Programa que murestra 
-el número PI y calcula 
-el perimetro, radio y 
-area de un círculo
-"""
-
 class Circulo:
 	def __init__(self, radio):
-
-		# Propiedades
-
 		self.__radio = radio
 		self.__pi = 3.1415
 
 	def calcular_perimetro(self):
-		print(f"Perimetro: {2 * self.__pi * self.__radio}")
+		print(f"Perímetro: {2 * self.__pi * self.__radio}")
 
 	def calcular_area(self):
-		print(f"Area: {self.__pi * self.__radio ** 2}")
+		print(f"Área: {self.__pi * self.__radio ** 2}")
 
 	def obtener_pi(self):
 		print(f"PI: {self.__pi}")
 
 	def obtener_radio(self, valor):
-		self.__radio = valor
-
-		# Si el valor no es positivo no se mostrara el radio
-
 		try:
 			if valor <= 0:
 				return "No puede ser negativo ni cero"
-		
+
+			self.__radio = valor	
 			return f"Radio: {self.__radio}"
 
 		except Exception as e:
-			return f"Tiene que ser un numero positivo"		
+			print(f"Error inesperado: {e}")
 
 print("Propiedades de un círculo:\n")
 
